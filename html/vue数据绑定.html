@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <!-- :是v-bind的缩写 v-bind只能实现单向绑定-->
+        <!-- v-model只能用于表单类元素上，就是说有value属性的元素上面
+            输入框
+            单选
+            复选
+            多行输入等
+        
+        -->
+        单项数据绑定：<input type="text" :value="name"><br>
+        双向数据绑定：<input type="text" v-model="name">
+    </div>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                name: 'vue'
+            }
+        })
+    </script>
+</body>
+
+</html>
